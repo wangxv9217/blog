@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Blog</title>
+  <meta charset="utf-8">
+  <meta name="Viewport" content="width=device-wdith, initial-scale=1.0">
+  <link rel="stylesheet" href="newblog.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div>
+    <header class="black-bar">
+      <h1>My Blog</h1>
+      <input id="back-home" class="button"  type="submit" value="回到首页">
+	    <p id="p1">退出登录</p>
+    </header>
+	</div>
+  
+  <div class="background-box">
+  
+    <form  enctype="multipart/form-data">
+      <h2 class="p2">新的文章</h2>
+      <br>
+      <br>
+      <label for="title">标题:</label>
+      
+      <input class="text-box" type="text" id="title" name="title" required>
+      <br>
+      <br>
+      <label for="author">日期:</label>
+      
+      <input class="text-box" type="text" id="author" name="author" required>
+      <br>
+      <br>
+      <label for="content">内容:</label>
+      
+      <textarea id="content" name="content" rows="10" cols="50" required></textarea>
+      <br>
+      <br>
+      <label for="images">图片:</label>
+      <input class="text-box" type="file" id="images" name="images" multiple>
+      <br>
+      <br>
+      <div class="release-button">
+        <input id="release-button" type="submit" value="发布">
+      </div>
+    </form>
+  </div>
+ 
+</body>
+</html>
+
+
+
+
+

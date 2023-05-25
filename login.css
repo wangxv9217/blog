@@ -1,0 +1,99 @@
+body {
+  background: linear-gradient(to bottom, #3E4348, #1F2124);
+    }
+.window{
+  background-color: #202124;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  height: 260px;
+  width: 290px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.p1{
+  color: #FFFFFF;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+.Input-box{
+  background-color:#202124;
+  height: 30px;
+  width: 220px;
+  border: none;
+  border-bottom: 1px solid #F68657;
+  outline: none;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+.black-bar{
+  background-color: #202124;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.button{
+  border: none;
+  height: 32px;
+  width: 120px;
+  color: #FFFFFF;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 13px;
+  margin: 8px;
+  cursor: pointer;
+}
+#Login-button{
+  background-color: #F68657;
+}
+#Register-button{
+  background-color: #a3a1a1;
+}
+#button-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+#user-div{
+  margin: 8px;
+  padding: 0;
+}
+#password-div{
+  margin: 8px;
+  padding: 0;
+}
+span{
+  color: #8b8687;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color:  #FFFFFF;
+  font-family: 'Limelight', cursive;
+  position: absolute;
+  left: 20px;
+}
+#random-quote{
+  text-align: center;
+  color: #FFFFFF;
+  margin: 8px;
+}

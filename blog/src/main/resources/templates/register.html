@@ -1,0 +1,51 @@
+<!DOCTYPR html>
+<html>
+  <head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="Viewport" content="width=device-wdith, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/CSS/register.css}">
+	<script th:src="@{/js/register.js}"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;500&display=swap" rel="stylesheet">	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  </head>
+  
+  <body>
+    <div>
+      <header class="black-bar">
+        <h1>My Blog</h1>
+      </header>
+	</div>
+
+
+    <div class="window">
+      <form th:action="@{/admin/register}" method="POST">
+      <p class="p1">欢迎注册</p>
+      <br>
+      <div id="user-div">
+        <span class="material-symbols-outlined">person
+        </span>
+        <input class="Input-box" type="text" name="userName" placeholder="请输入用户名" id="username" required>
+      </div>
+      <div id="password-div">
+        <span class="material-symbols-outlined">key</span>
+        <input class="Input-box" type="password" name="password" placeholder="请输入密码" id="password1" required> 
+      </div>
+        <!--  <div id="password-div">
+        <span class="material-symbols-outlined">key</span>
+        <input class="Input-box" type="password" name="confirmPassword" placeholder="请再次输入密码" id="password2" required> 
+      </div>-->
+      <br>
+      <div id="button-div">
+        <input class="button" id="Register-button" type="submit" value="注册">
+        <input class="button" id="Return-button" type="button" value="登录" onclick="location.href='/admin/login'">
+      </div>
+      </form> 
+    </div>
+  </body>
+</html>

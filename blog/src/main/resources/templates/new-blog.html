@@ -4,8 +4,8 @@
   <title>New Blog</title>
   <meta charset="utf-8">
   <meta name="Viewport" content="width=device-wdith, initial-scale=1.0">
-  <link rel="stylesheet" href="newblog.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" th:href="@{/CSS/new-blog.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,38 +16,42 @@
   <div>
     <header class="black-bar">
       <h1>My Blog</h1>
-      <input id="back-home" class="button"  type="submit" value="回到首页">
-	    <p id="p1">退出登录</p>
+      <a th:href="@{/admin/blog/all}" id="back">回到首页</a>
+	  <form class="logout-form" th:action="@{/logout}" method="post">
+         <a id="p1" href="#" onclick="this.parentNode.submit()">退出登录</a>
+      </form>
+      <p id="p3" th:text="${userName}"></p>
     </header>
-	</div>
+  </div>
   
   <div class="background-box">
   
-    <form  enctype="multipart/form-data">
+    <form  th:action="@{/admin/blog/new-blog}" enctype="multipart/form-data" method="POST">
       <h2 class="p2">新的文章</h2>
       <br>
       <br>
       <label for="title">标题:</label>
       
-      <input class="text-box" type="text" id="title" name="title" required>
+      <input class="text-box" type="text" id="title" name="blogTitle" required>
       <br>
       <br>
       <label for="author">日期:</label>
       
-      <input class="text-box" type="text" id="author" name="author" required>
+      <input class="text-box" type="text" id="author" name="blogDate" required>
       <br>
       <br>
-      <label for="content">内容:</label>
+      <label for="message">内容:</label>
       
-      <textarea id="content" name="content" rows="10" cols="50" required></textarea>
+      <textarea id="message" name="message" rows="10" cols="50" required></textarea>
       <br>
       <br>
       <label for="images">图片:</label>
-      <input class="text-box" type="file" id="images" name="images" multiple>
+      <input class="text-box" type="file" id="images" name="blogImage" multiple>
       <br>
       <br>
+      <input type="hidden" name="userId" th:value="${userId}">
       <div class="release-button">
-        <input id="release-button" type="submit" value="发布">
+        <button class="edit" id="release-button">发布</button>
       </div>
     </form>
   </div>
